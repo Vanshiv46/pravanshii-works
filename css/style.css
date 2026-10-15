@@ -243,6 +243,7 @@ section {
 .contact .section-label,
 .contact-heading { max-width: 900px; margin-left: auto; margin-right: auto; }
 .contact-heading { margin-bottom: 55px; }
+.contact-note { margin-top: 22px; font-size: 14px; font-weight: 600; }
 
 /* =========================================
    SECTION STACKING (each rises over the last)
@@ -273,7 +274,7 @@ section {
 .about-content {
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: .85fr 1.15fr;
     align-items: center;
     gap: 4vw;
     max-width: 1000px;
@@ -331,26 +332,56 @@ section {
 
 .about-bubble {
     position: relative;
-    width: min(430px, 100%);
-    aspect-ratio: 1;
-    padding: 64px;
+    width: 100%;
+    padding: 56px 58px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 12px;
     background: var(--cream-dark);
-    border-radius: 50%;
+    border-radius: 80px 80px 80px 80px / 90px 90px 90px 90px;
 }
 
 .bubble-label { font-size: 10px; font-weight: 700; letter-spacing: 2px; margin-bottom: 12px; }
 
 .about-bubble h2 {
     font-family: 'Syne', sans-serif;
-    font-size: clamp(28px, 3.4vw, 44px);
+    font-size: clamp(28px, 3.2vw, 40px);
     line-height: 1;
-    margin-bottom: 16px;
+    margin-bottom: 4px;
 }
 
 .about-bubble p { font-size: 14px; line-height: 1.65; }
+.about-bubble .bubble-closing { font-weight: 700; }
+
+.available {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 6px;
+    padding: 8px 16px;
+    border-radius: 40px;
+    background: var(--white);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .8px;
+}
+.available i {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #4caf6a;
+    box-shadow: 0 0 0 4px rgba(76, 175, 106, .2);
+}
+
+.chips-label {
+    margin-top: 56px;
+    text-align: center;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
 
 .bubble-star { position: absolute; right: 48px; top: 50px; font-size: 22px; color: var(--red); }
 
@@ -359,7 +390,7 @@ section {
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-    margin-top: 60px;
+    margin-top: 16px;
 }
 
 .skill-chips li {
@@ -374,6 +405,7 @@ section {
 .skill-chips li:nth-child(2) { background: var(--yellow); }
 .skill-chips li:nth-child(3) { background: var(--green); }
 .skill-chips li:nth-child(4) { background: var(--blue); }
+.skill-chips li:nth-child(5) { background: var(--orange); }
 
 
 /* =========================================
@@ -693,11 +725,11 @@ footer {
 
     /* About */
     .about-photo-wrapper { width: 80%; }
-    .about-bubble { width: 100%; padding: 12vw 11vw; }
-    .about-bubble h2 { font-size: 28px; }
-    .about-bubble p { font-size: 12.5px; line-height: 1.55; }
-    .bubble-star { right: 11vw; top: 11vw; font-size: 18px; }
-    .skill-chips { margin-top: 44px; }
+    .about-bubble { padding: 34px 26px; border-radius: 36px; gap: 10px; }
+    .about-bubble h2 { font-size: 27px; }
+    .about-bubble p { font-size: 13.5px; line-height: 1.6; }
+    .bubble-star { right: 22px; top: 22px; font-size: 18px; }
+    .chips-label { margin-top: 40px; }
 
     /* Works */
     .works-heading h2 { font-size: 52px; letter-spacing: -3px; }
